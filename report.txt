@@ -1,0 +1,33 @@
+Submitted by- Harshit Mawandia(2020CS10348) and Nirbhay Kumar(2020CS10365)
+
+COL333 ASSIGNMENT 3 REPORT
+
+PROBLEM STATEMENT:
+
+1.Given sensor information of a car, determine position of other cars on the grid.
+
+2.Given a sensor information of a car and its goal positions, determine the optimal move.
+
+
+ESTIMATOR
+
+Key Idea - We apply particle filtering algorithm with 2000 particles
+
+When given observation variables that is sensor data , a particle filter seeks to estimate the posterior density of the state variables that is the belief. 
+In a hidden Markov Model, both hidden and visible variables, the particle filter is created. The hidden variables (state-process) and the observable variables (observation process) are connected by a known functional form.
+Using the observation measurement process, we calculate the posterior distribution of the other states and normalise its values.
+
+
+INTELLIGENT DRIVER
+
+Key Idea - Based on the information we have of the grid world we will decide next move. 
+
+We first estimate the goal position we want to go towards, this is significant in case of multiple goals.
+Now we shall decide our next move based on our goal position and the type of squares in the vicinity
+Now given the current belief about where other cars are and a graph of how, w then chose a next node to drive towards.
+
+TESTING: 
+Estimator accurately determines the belief of the stdCars. As can be seen visually in debug mode.
+Intelligent Driver works successfully for small and lombard layouts upto numerous cars.
+
+
